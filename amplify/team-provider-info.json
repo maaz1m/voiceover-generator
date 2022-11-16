@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-voiceovergenerator-dev-132051-authRole",
+      "UnauthRoleArn": "arn:aws:iam::011253172595:role/amplify-voiceovergenerator-dev-132051-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::011253172595:role/amplify-voiceovergenerator-dev-132051-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-voiceovergenerator-dev-132051-deployment",
+      "UnauthRoleName": "amplify-voiceovergenerator-dev-132051-unauthRole",
+      "StackName": "amplify-voiceovergenerator-dev-132051",
+      "StackId": "arn:aws:cloudformation:us-east-1:011253172595:stack/amplify-voiceovergenerator-dev-132051/67373d30-65db-11ed-bd98-0e24e64524eb",
+      "AmplifyAppId": "dzlhf14xx1zbk"
+    }
+  }
+}
