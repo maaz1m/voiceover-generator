@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+This is a web application that allows users to generate audio voiceovers from text input. The app is built using React for the front-end, AWS Amplify for the back-end infrastructure, and a combination of AWS Lambda, DynamoDB, S3, and API Gateway for processing and storing the audio files.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
+To get started with the app, you'll need to install the necessary dependencies and configure the AWS services.
 
-## Available Scripts
+1. Clone the repository and navigate to the root directory.
+2. Install the necessary dependencies by running npm install.
+3. Configure the AWS Amplify backend by running amplify init and following the prompts.
+4. Add the necessary AWS services by running amplify add api and amplify add storage.
+5. Deploy the AWS resources by running amplify push.
+6. Start the app by running npm start.
 
-In the project directory, you can run:
+## Screenshots
+![Screens![Screenshot 2023-03-08 at 6 27 57 PM](https://user-images.githubusercontent.com/29309900/223878100-ea07c045-abe4-400c-9720-dab8ffb44e49.png)
+![Screenshot 2023-03-08 at 6 28 38 PM](https://user-images.githubusercontent.com/29309900/223878129-00bf4d6c-d7ef-4749-a5cc-6cacbbe214ba.png)
+![Screenshot 2023-03-08 at 6 28 38 PM](https://user-images.githubusercontent.com/29309900/223878110-e012bb8b-1cd0-4e2a-8630-97c7b93c1c02.png)
 
-### `npm start`
+## Architecture
+The app is built using a serverless architecture, with AWS Lambda functions handling the text-to-speech conversion and API Gateway providing a RESTful API for accessing the Lambda functions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://user-images.githubusercontent.com/29309900/223878267-87ee8682-5352-4610-a468-2de318b45100.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The text input and audio files are stored in an S3 bucket, while a DynamoDB table is used to store metadata about each voiceover request, such as the text input and the corresponding audio file URL.
